@@ -1,0 +1,17 @@
+A 狼人 wolf
+B 狼王 k_wolf
+C 白狼王 wk_wolf
+D 隐狼 h_wolf
+E 石像鬼 s_wolf
+F 狼美人 b_wolf
+G 女巫 witch
+H 猎人 hunter
+I 预言家 prophet
+J 守卫  guard
+K 丘比特 cupid
+L 猎魔人 d_hunter
+M 炸弹人 bomber
+N 骑士 knight
+O 驯熊师 Bear
+P 熊孩子 wild_child
+Q 守墓人 g_keeper
