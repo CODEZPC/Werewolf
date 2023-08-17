@@ -29,9 +29,15 @@ class characher(object):
 
     def __str__(self):
         if self.alive == 1:
-            return ec[self.job] + ":最终存活"
+            if len(ec[self.job]) == 2:
+                return ec[self.job] + "  :\033[0;32m最终存活\033[0m"
+            else:
+                return ec[self.job] + ":\033[0;32m最终存活\033[0m"
         else:
-            return ec[self.job] + ":" + self.die_cause
+            if len(ec[self.job]) == 2:
+                return ec[self.job] + "  :\033[0;31m" + self.die_cause + "\033[0m"
+            else:
+                return ec[self.job] + ":\033[0;31m" + self.die_cause + "\033[0m"
 
 
 class c_witch(characher):

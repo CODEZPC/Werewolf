@@ -1,6 +1,11 @@
 # This is a *Werewolf project*(**Simple Chinese[zh-cn]**).  
 ## Update logs:  
 
+### 2023-08-17 20:36:18[`0004-0.2.0a`]:  
+> 1.` main.py `config before game completed  
+*(but event hadn't wrote)*  
+> 2.` main.py `starting game wrote  
+
 ### 2023-08-17 11:22:43[`0003-0.1.1a`]:  
 > 1.` main.py `wrote a part of config before game  
 > 2.` main.py `auto report  

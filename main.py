@@ -169,11 +169,12 @@ try:
         if i in player:
             player[player.index(i)] = cj[i]
     # config
+    # -gamemode
     err = 1
     while err:
         os.system("cls")
         try:
-            inp = int(input("选择游戏模式：1 明牌  2 暗牌 :"))
+            inp = int(input("选择\033[0;34m游戏模式\033[0m：1 明牌  2 暗牌 :"))
         except:
             pr.Enterr()
             time.sleep(1)
@@ -184,13 +185,77 @@ try:
             else:
                 pr.Enterr()
                 time.sleep(1)
+    # -freetalk
+    err = 1
+    while err:
+        os.system("cls")
+        try:
+            inp = int(input("选择是否开启\033[0;34m自由讨论\033[0m：1 开  2 关 :"))
+        except:
+            pr.Enterr()
+            time.sleep(1)
+        else:
+            if inp == 1 or inp == 2:
+                frtalk = inp
+                err = 0
+            else:
+                pr.Enterr()
+                time.sleep(1)
+    # 实验功能 - 事件(还未准备前置！)
+    """
+    if cn >= 10:
+        err = 1
+        while err:
+            os.system("cls")
+            try:
+                inp = int(input("选择是否开启\033[0;34m事件模式\033[0m：1 开  2 关 :"))
+            except:
+                pr.Enterr()
+                time.sleep(1)
+            else:
+                if inp == 1 or inp == 2:
+                    event = inp
+                    err = 0
+                else:
+                    pr.Enterr()
+                    time.sleep(1)
+    """
+    # starting
+    os.system("cls")
+    print("\033[0;32m所有设置已完成，\n开始启动主进程...\033[0m")
+    time.sleep(1)
+    os.system("cls")
+    print("游戏参数:")
+    print("人数:\033[0;34m", cn, "\033[0m")
+    print("含有以下职业:")
+    print("\033[0;34m2\033[0m 狼人")
+    for i in "BCDEFGHIJKLMNOPQ":
+        if cl[i]:
+            print("\033[0;34m1\033[0m", c.ec[cj[i].job])
+    if mode == 1:
+        print("模式：\033[0;34m明牌\033[0m")
+    else:
+        print("模式：\033[0;34m暗牌\033[0m")
+    if frtalk == 1:
+        print("自由讨论：\033[0;34m开\033[0m")
+    else:
+        print("自由讨论：\033[0;34m关\033[0m")
+    """
+    if event == 1:
+        print("事件：\033[0;34m开\033[0m")
+    else:
+        print("事件：\033[0;34m关\033[0m")
+    """
+    os.system("pause")
 
 
     os.system("cls")
     for i in range(cn):
+        if cn >= 10 and i < 9:
+            print(end=" ")
         print(str(i + 1) + "号玩家:", player[i])
 
-    input('运行结束，按"Enter"退出')
+    os.system("pause")
 except:
     os.system("cls")
     print("\033[0;31mOops!\033[0m")
@@ -198,4 +263,4 @@ except:
     print("\033[0;31m可能是 输入错误 ，但是未被系统识别；\033[0m")
     print("\033[0;31m也有可能是 程序意外错误 。\033[0m")
     print("\033[0;31m请重启程序，或联系开发人员(zpcpy@outlook.com)\033[0m")
-    input('运行结束，按"Enter"退出')
+    os.system("pause")
