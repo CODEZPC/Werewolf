@@ -10,6 +10,6 @@
 > 3.Known bug fixed
 
 ### 2023-08-17 11:22:43[`0003-0.1.1a`]:  
-> 1.` main.py `wrote a part of config before game
-> 2.` main.py `auto report
-> 3.Known bug fixed
+> 1.` main.py `wrote a part of config before game  
+> 2.` main.py `auto report  
+> 3.Known bug fixed  
