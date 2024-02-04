@@ -1,4 +1,10 @@
 #!python3
+
+'''
+Werewolf Python Edition [V0.3.0 pre 1]
+By CODEZPC
+'''
+
 try:
     # import
     import math
@@ -12,7 +18,7 @@ try:
     # launch
     os.system("cls")
     err = 0
-    print("狼人杀 Pro (Terminal) 正在启动中......")
+    print("狼人杀 Pro 正在启动中......")
     for i in range(1, 101):
         print("\r", end=" ")
         if i == 100:
@@ -97,6 +103,9 @@ try:
                 pr.Enterr()
                 time.sleep(1)
             else:
+                if "D" in inp and "E" in inp:
+                    pr.Enterr()
+                    time.sleep(1)
                 for i in inp:
                     if i not in check:
                         pr.Enterr()
@@ -201,6 +210,22 @@ try:
             else:
                 pr.Enterr()
                 time.sleep(1)
+    # -police
+    err = 1
+    while err:
+        os.system("cls")
+        try:
+            inp = int(input("选择是否\033[0;34m竞选警长\033[0m：1 是  2 否 :"))
+        except:
+            pr.Enterr()
+            time.sleep(1)
+        else:
+            if inp == 1 or inp == 2:
+                police = inp
+                err = 0
+            else:
+                pr.Enterr()
+                time.sleep(1)
     # 实验功能 - 事件(还未准备前置！)
     """
     if cn >= 10:
@@ -231,7 +256,7 @@ try:
     print("\033[0;34m2\033[0m 狼人")
     for i in "BCDEFGHIJKLMNOPQ":
         if cl[i]:
-            print("\033[0;34m1\033[0m", c.ec[cj[i].job])
+            print("\033[0;34m1\033[0m", cj[i].show())
     if mode == 1:
         print("模式：\033[0;34m明牌\033[0m")
     else:
@@ -240,6 +265,11 @@ try:
         print("自由讨论：\033[0;34m开\033[0m")
     else:
         print("自由讨论：\033[0;34m关\033[0m")
+    if police == 1:
+        print("竞选警长：\033[0;34m开\033[0m")
+    else:
+        print("竞选警长：\033[0;34m关\033[0m")
+    print("\033[0;33m警告：在游戏过程中，输入错误则代表跳过！\033[0m")
     """
     if event == 1:
         print("事件：\033[0;34m开\033[0m")
@@ -247,14 +277,27 @@ try:
         print("事件：\033[0;34m关\033[0m")
     """
     os.system("pause")
+    # main
+    day = 0
+    while True:
+        day += 1
+        os.system("cls")
+        print("第" + str(day) + "夜")
+        time.sleep(1)
+        # -s_wolf
+        if cl["E"]:
+            if not cl["A"]:
+                inp = input("其他所有狼人已经死了，请选择你要杀的角色:")
 
+        # -----NOT COMPLETED----- #
 
+        # END
+        break
     os.system("cls")
     for i in range(cn):
         if cn >= 10 and i < 9:
             print(end=" ")
         print(str(i + 1) + "号玩家:", player[i])
-
     os.system("pause")
 except:
     os.system("cls")

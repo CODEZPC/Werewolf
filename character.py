@@ -38,6 +38,8 @@ class characher(object):
                 return ec[self.job] + "  :\033[0;31m" + self.die_cause + "\033[0m"
             else:
                 return ec[self.job] + ":\033[0;31m" + self.die_cause + "\033[0m"
+    def show(self):
+        return ec[self.job]
 
 
 class c_witch(characher):
