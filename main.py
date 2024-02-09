@@ -1,9 +1,9 @@
 #!python3
 
-'''
-Werewolf Python Edition [V0.3.0 pre 1]
+"""
+Werewolf Python Edition [0008-V0.3.0 pre4 [Chinese New Year Special Edition]]
 By CODEZPC
-'''
+"""
 
 try:
     # import
@@ -16,28 +16,34 @@ try:
     import pr
 
     # launch
+    i = 0
+    inp = input("Command(empty=start):$C$ ")
     os.system("cls")
     err = 0
-    print("狼人杀 Pro 正在启动中......")
-    for i in range(1, 101):
-        print("\r", end=" ")
-        if i == 100:
-            print(
-                "\033[0;32m{}% [".format(i),
-                "=" * (i // 4),
-                "\033[0m",
-                end="\033[0;32m]\033[0m",
-            )
-        else:
-            print("{}% \033[0;33m[".format(i), "=" * (i // 4), "\033[0m", end=" ")
-        sys.stdout.flush()
-        time.sleep(random.randint(1, 30) / 100)
-    time.sleep(1)
+    if inp.upper() != "DQS":
+        print("狼人杀 Pro 正在启动中......")
+        while i <= 10000:
+            print("\r", end=" ")
+            if i == 10000:
+                os.system("cls")
+                print("\033[0;32m完成!\n2024新春快乐!\033[0m")
+                break
+            else:
+                print(
+                    "{}% \033[0;33m[".format(i / 100),
+                    "=" * (i // 400),
+                    "\033[0m",
+                    end=" ",
+                )
+            sys.stdout.flush()
+            i += pr.mx(i)
+            time.sleep(random.randint(0,5)/100)
+        time.sleep(2)
     # get character numbers
     err = 1
     while err:
+        os.system("cls")
         try:
-            os.system("cls")
             cn = int(input("输入游戏人数 \033[0;34m(6-16)\033[0m :"))
         except:
             pr.Enterr()
@@ -106,6 +112,7 @@ try:
                 if "D" in inp and "E" in inp:
                     pr.Enterr()
                     time.sleep(1)
+                    continue
                 for i in inp:
                     if i not in check:
                         pr.Enterr()
@@ -303,7 +310,8 @@ except:
     os.system("cls")
     print("\033[0;31mOops!\033[0m")
     print("\033[0;31m): 程序运行出错\033[0m")
-    print("\033[0;31m可能是 输入错误 ，但是未被系统识别；\033[0m")
-    print("\033[0;31m也有可能是 程序意外错误 。\033[0m")
+    print("\033[0;31m可能是输入错误 ，但是未被系统识别；\033[0m")
+    print("\033[0;31m也有可能是程序意外错误 。\033[0m")
     print("\033[0;31m请重启程序，或联系开发人员(zpcpy@outlook.com)\033[0m")
     os.system("pause")
+    os.exit()

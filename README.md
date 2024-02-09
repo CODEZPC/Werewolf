@@ -1,13 +1,44 @@
 # Werewolf Python Edition by CODEZPC(**Simple Chinese[zh-cn]**).  
 
-## Files(5 files,11.9K 12283B):  
+## Files:  
 - `main.py`  
 - `character.py`  
 - `pr.py`  
-- `README.py`  
+- `README.md`  
 - `character.txt`  
+- `Version-Update`
+
+## Authors:  
+
+### Director:  
+
+**CODEZPC**  
+
+### Code:  
+
+**CODEZPC**  
+
+### Gamerule check:  
+
+**CODEZPC** **Pzydsdsl** **Zhzh** **52hertz**  
+
+### AI Gamer thinker:  
+
+**CODEZPC** **52hertz**  
 
 ## Update logs:  
+
+### 2024-02-09 12:00:00[`0008-V0.3.0 pre4 [Chinese New Year Special Edition]`]:  
+**Happy Chinese Spring Festival!**  
+- Add file `Version-Update` to auto update but **disabled**
+
+### 2024-02-09 00:00:00[`0007-V0.3.0 pre3 [Chinese New Year Special Edition]`]:  
+**Happy Chinese Spring Festival!**  
+- The loading screen at the beginning has been optimized  
+
+### 2024-02-07 14:00:00[`0006-V0.3.0 pre2`]:
+- Add command before load
+- Emergency fixed a bug
 
 ### 2024-02-04 20:55:01[`0005-V0.3.0 pre1`]:  
 - Fixed something not in line with the rules of the game  
