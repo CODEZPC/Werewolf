@@ -4,7 +4,6 @@
 Werewolf Python Edition [0008-V0.3.0 pre4 [Chinese New Year Special Edition]]
 By CODEZPC
 """
-
 try:
     # import
     import math
@@ -13,15 +12,16 @@ try:
     import sys
     import time
     import character as c
-    import pr
+    import func
 
     # launch
     i = 0
+    os.system("cls")
     inp = input("Command(empty=start):$C$ ")
     os.system("cls")
     err = 0
     if inp.upper() != "DQS":
-        print("狼人杀 Pro 正在启动中......")
+        print("狼人杀 Pro 正在启动中......\nTip:常运行Update.py可以保证版本更新哦")
         while i <= 10000:
             print("\r", end=" ")
             if i == 10000:
@@ -36,8 +36,8 @@ try:
                     end=" ",
                 )
             sys.stdout.flush()
-            i += pr.mx(i)
-            time.sleep(random.randint(0,5)/100)
+            i += func.mx(i)
+            time.sleep(random.randint(0, 5) / 100)
         time.sleep(2)
     # get character numbers
     err = 1
@@ -46,14 +46,14 @@ try:
         try:
             cn = int(input("输入游戏人数 \033[0;34m(6-16)\033[0m :"))
         except:
-            pr.Enterr()
+            func.Enterr()
             time.sleep(1)
             continue
         else:
             err = 0
         if cn < 6 or cn > 16:
             err = 1
-            pr.Enterr()
+            func.Enterr()
             time.sleep(1)
     # get character jobs
     cl = {
@@ -106,16 +106,16 @@ try:
             print("B 狼王  C 白狼王  D 隐狼  E 石像鬼  F 狼美人")
             inp = input()
             if len(inp) != ecn:
-                pr.Enterr()
+                func.Enterr()
                 time.sleep(1)
             else:
                 if "D" in inp and "E" in inp:
-                    pr.Enterr()
+                    func.Enterr()
                     time.sleep(1)
                     continue
                 for i in inp:
                     if i not in check:
-                        pr.Enterr()
+                        func.Enterr()
                         time.sleep(1)
                         break
                     else:
@@ -137,12 +137,12 @@ try:
             print("K 丘比特  L 猎人  M 炸弹人  N 骑士\nO 驯熊师  P 熊孩子  Q 守墓人")
             inp = input()
             if len(inp) != ecn:
-                pr.Enterr()
+                func.Enterr()
                 time.sleep(1)
             else:
                 for i in inp:
                     if i not in check:
-                        pr.Enterr()
+                        func.Enterr()
                         time.sleep(1)
                         break
                     else:
@@ -192,14 +192,14 @@ try:
         try:
             inp = int(input("选择\033[0;34m游戏模式\033[0m：1 明牌  2 暗牌 :"))
         except:
-            pr.Enterr()
+            func.Enterr()
             time.sleep(1)
         else:
             if inp == 1 or inp == 2:
                 mode = inp
                 err = 0
             else:
-                pr.Enterr()
+                func.Enterr()
                 time.sleep(1)
     # -freetalk
     err = 1
@@ -208,14 +208,14 @@ try:
         try:
             inp = int(input("选择是否开启\033[0;34m自由讨论\033[0m：1 开  2 关 :"))
         except:
-            pr.Enterr()
+            func.Enterr()
             time.sleep(1)
         else:
             if inp == 1 or inp == 2:
                 frtalk = inp
                 err = 0
             else:
-                pr.Enterr()
+                func.Enterr()
                 time.sleep(1)
     # -police
     err = 1
@@ -224,14 +224,14 @@ try:
         try:
             inp = int(input("选择是否\033[0;34m竞选警长\033[0m：1 是  2 否 :"))
         except:
-            pr.Enterr()
+            func.Enterr()
             time.sleep(1)
         else:
             if inp == 1 or inp == 2:
                 police = inp
                 err = 0
             else:
-                pr.Enterr()
+                func.Enterr()
                 time.sleep(1)
     # 实验功能 - 事件(还未准备前置！)
     """
@@ -314,4 +314,4 @@ except:
     print("\033[0;31m也有可能是程序意外错误 。\033[0m")
     print("\033[0;31m请重启程序，或联系开发人员(zpcpy@outlook.com)\033[0m")
     os.system("pause")
-    os.exit()
+    exit()

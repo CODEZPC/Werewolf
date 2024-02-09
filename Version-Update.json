@@ -1,0 +1,11 @@
+{
+    "ver": 8,
+    "files": [
+        "character.txt",
+        "character.py",
+        "main.py",
+        "func.py",
+        "README.md",
+        "Version-Update.json"
+    ]
+}
