@@ -1,13 +1,5 @@
 # Werewolf Python Edition by CODEZPC(**Simple Chinese[zh-cn]**).  
 
-## Files:  
-- `main.py`  
-- `character.py`  
-- `pr.py`  
-- `README.md`  
-- `character.txt`  
-- `Version-Update`
-
 ## Authors:  
 
 ### Director:  
@@ -28,9 +20,13 @@
 
 ## Update logs:  
 
-### 2024-02-09 12:00:00[`0008-V0.3.0 pre4 [Chinese New Year Special Edition]`]:  
+### 2024-02-11 15:50:00[`0009-V0.3.0 pre5 [Chinese New Year Special Edition]`]:  
 **Happy Chinese Spring Festival!**  
-- Add file `Version-Update` to auto update but **disabled**
+- Half-Auto update is enabled
+
+### 2024-02-09 16:00:00[`0008-V0.3.0 pre4 [Chinese New Year Special Edition]`]:  
+**Happy Chinese Spring Festival!**  
+- Add file `Version-Update.json` and `Update.py` to auto update
 
 ### 2024-02-09 00:00:00[`0007-V0.3.0 pre3 [Chinese New Year Special Edition]`]:  
 **Happy Chinese Spring Festival!**  

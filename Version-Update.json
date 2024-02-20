@@ -1,5 +1,6 @@
 {
-    "ver": 8,
+    "ver": 9,
+    "num": 6,
     "files": [
         "character.txt",
         "character.py",

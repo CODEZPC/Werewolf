@@ -1,7 +1,7 @@
 #!python3
 
 """
-Werewolf Python Edition [0008-V0.3.0 pre4 [Chinese New Year Special Edition]]
+Werewolf Python Edition [0009-V0.3.0 pre5 [Chinese New Year Special Edition]]
 By CODEZPC
 """
 try:
