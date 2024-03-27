@@ -19,9 +19,7 @@ def up():
         y.close()
 
 
-print(
-    '请前往 https://codezpc.lanzouo.com/iJxBf1o06jfg 密码:1234567890\n下载ZIP文件，并重命名为"UD.zip"，然后放到C盘根目录下'
-)
+print('请前往 https://codezpc.lanzouo.com/b05ew8yaj 密码:1234567890\n下载ZIP文件，并重命名为"UD.zip"，然后放到C盘根目录下')
 os.system("pause")
 try:
     f = zipfile.ZipFile("C:\\UD.zip")

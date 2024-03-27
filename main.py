@@ -1,7 +1,7 @@
 #!python3
 
 """
-Werewolf Python Edition [0009-V0.3.0 pre5 [Chinese New Year Special Edition]]
+Werewolf Python Edition [0010-V0.3.0 pre6]
 By CODEZPC
 """
 try:
@@ -11,6 +11,7 @@ try:
     import random
     import sys
     import time
+    import shutil
     import character as c
     import func
 
@@ -20,7 +21,10 @@ try:
     inp = input("Command(empty=start):$C$ ")
     os.system("cls")
     err = 0
-    if inp.upper() != "DQS":
+    if inp.upper() == "RMC":#Remove Cache
+        shutil.rmtree(".\\__pycache__")
+        exit()
+    elif inp.upper() != "DQS":#Devlop Quick Start
         print("狼人杀 Pro 正在启动中......\nTip:常运行Update.py可以保证版本更新哦")
         while i <= 10000:
             print("\r", end=" ")

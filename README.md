@@ -20,9 +20,13 @@
 
 ## Update logs:  
 
+### 2024-02-11 15:50:00[`0010-V0.3.0 pre6`]:  
+- Add Command Guide **Command.txt**
+- Add a Command
+
 ### 2024-02-11 15:50:00[`0009-V0.3.0 pre5 [Chinese New Year Special Edition]`]:  
 **Happy Chinese Spring Festival!**  
-- Half-Auto update is enabled
+- Half-Auto update enabled
 
 ### 2024-02-09 16:00:00[`0008-V0.3.0 pre4 [Chinese New Year Special Edition]`]:  
 **Happy Chinese Spring Festival!**  

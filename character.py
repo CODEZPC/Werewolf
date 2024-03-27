@@ -19,13 +19,8 @@ ec = {
 }
 
 
-def ch(n, c):
-    eval(n).job = n
-    eval(n).camp = c
-
-
-class character(object):
-    def __init__(self, job, camp, love=0, alive=1, die_cause=-1):
+class characher(object):
+    def __init__(self, job, camp, love, alive, die_cause):
         self.job = job
         self.camp = camp
         self.love = love
@@ -43,72 +38,31 @@ class character(object):
                 return ec[self.job] + "  :\033[0;31m" + self.die_cause + "\033[0m"
             else:
                 return ec[self.job] + ":\033[0;31m" + self.die_cause + "\033[0m"
-
     def show(self):
         return ec[self.job]
 
 
-class killer(character):
-    def __init__(self, kill_value={}):
-        self.kill_value = kill_value
-
-
-class get(character):
-    def __init__(self, get_value={}):
-        self.get_value = get_value
-
-
-class checker(character):
-    def __init__(self, check_value={}):
-        self.check_value = check_value
-
-
-class c_witch(checker):
-    def __init__(self, save=1, kill=1):
+class c_witch(characher):
+    def __init__(self, save, kill):
         self.save = save
         self.kill = kill
 
 
-class c_s_wolf(character):
-    def __init__(self, kill_value={}, get_value={}):
-        self.kill_value = kill_value
-        self.get_value = get_value
-
-
-wolf = killer()
-k_wolf = killer()
-wk_wolf = killer()
-h_wolf = killer()
-s_wolf = c_s_wolf()
-b_wolf = killer()
-
-wolf = ch("wolf", 0)
-k_wolf = ch("k_wolf", 0)
-wk_wolf = ch("wk_wolf", 0)
-h_wolf = ch("h_wolf", 0)
-s_wolf = ch("s_wolf", 0)
-b_wolf = ch("b_wolf", 0)
-
-witch = checker()
-hunter = checker()
-guard = checker()
-d_hunter = checker()
-knight = checker()
-
-witch = ch("witch", 1)
-hunter = ch("hunter", 1)
-guard = ch("guard", 1)
-d_hunter = ch("d_hunter", 1)
-knight = ch("knight", 1)
-
-prophet = get()
-
-prophet = ch("prophet", 1)
-
-cupid = character("cupid", -1)
-bomber = character("bomber", 1)
-bear = character("bear", 1)
-wild_child = character("wild_child", -1)
-g_keeper = character("g_keeper", 1)
-
-witch = c_witch()
+wolf = characher("wolf", 0, 0, 1, -1)
+k_wolf = characher("k_wolf", 0, 0, 1, -1)
+wk_wolf = characher("wk_wolf", 0, 0, 1, -1)
+h_wolf = characher("h_wolf", 0, 0, 1, -1)
+s_wolf = characher("s_wolf", 0, 0, 1, -1)
+b_wolf = characher("b_wolf", 0, 0, 1, -1)
+witch = c_witch(1, 1)
+witch.job, witch.camp, witch.love, witch.alive, witch.die_cause = "witch", 1, 0, 1, -1
+hunter = characher("hunter", 1, 0, 1, -1)
+prophet = characher("prophet", 1, 0, 1, -1)
+guard = characher("guard", 1, 0, 1, -1)
+cupid = characher("cupid", -1, 0, 1, -1)
+d_hunter = characher("d_hunter", 1, 0, 1, -1)
+bomber = characher("bomber", 1, 0, 1, -1)
+knight = characher("knight", 1, 0, 1, -1)
+bear = characher("bear", 1, 0, 1, -1)
+wild_child = characher("wild_child", -1, 0, 1, -1)
+g_keeper = characher("g_keeper", 1, 0, 1, -1)

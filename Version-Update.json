@@ -1,12 +1,13 @@
 {
-    "ver": 9,
-    "num": 6,
+    "ver": 10,
+    "num": 7,
     "files": [
         "character.txt",
         "character.py",
         "main.py",
         "func.py",
         "README.md",
+        "Command.txt",
         "Version-Update.json"
     ]
 }
